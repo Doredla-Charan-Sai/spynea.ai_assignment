@@ -22,6 +22,7 @@ class Login extends Component {
       headers: {
         'Content-Type': 'application/json',
       },
+      credentials: 'include',
       body: JSON.stringify(userDetails),
     };
     const response = await fetch(apiUrl, options);
@@ -46,6 +47,7 @@ class Login extends Component {
       headers: {
         'Content-Type': 'application/json',
       },
+      credentials: 'include',
       body: JSON.stringify(userDetails),
     };
     const response = await fetch(apiUrl, options);
