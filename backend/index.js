@@ -10,7 +10,7 @@ const cors = require('cors');
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
 app.use(cors({
-    origin: 'http://localhost:3001',
+    origin: 'https://spynea-ai-assignment.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'], 
     credentials: true, 
 }));
