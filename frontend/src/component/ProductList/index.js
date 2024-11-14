@@ -18,7 +18,7 @@ class ProductList extends Component {
   fetchProducts = async () => {
     try {
       const yourAuthToken = Cookies.get('jwt_token');
-      const response = await fetch('http://localhost:3000/api/cars', {
+      const response = await fetch('https://spynea-ai-assignment-2.onrender.com/api/cars', {
         headers: {
           'Authorization': `Bearer ${yourAuthToken}`, 
           'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ class ProductList extends Component {
   handleDelete = async (productId) => {
     try {
       const yourAuthToken = Cookies.get('jwt_token');
-      const response = await fetch(`http://localhost:3000/api/cars/${productId}`, {
+      const response = await fetch(`https://spynea-ai-assignment-2.onrender.com/api/cars/${productId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${yourAuthToken}`,

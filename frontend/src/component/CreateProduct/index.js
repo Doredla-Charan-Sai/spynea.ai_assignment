@@ -27,7 +27,7 @@ class CreateProductWithNavigate extends Component {
   fetchProductDetails = async (productId) => {
     const token = Cookies.get('jwt_token');
     try {
-      const response = await fetch(`http://localhost:3000/api/cars/${productId}`, {
+      const response = await fetch(`https://spynea-ai-assignment-2.onrender.com/api/cars/${productId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -105,7 +105,7 @@ class CreateProductWithNavigate extends Component {
     }
 
     const token = Cookies.get('jwt_token');
-    const apiUrl = isEditMode ? `http://localhost:3000/api/cars/${this.props.productId}` : 'http://localhost:3000/api/cars';
+    const apiUrl = isEditMode ? `https://spynea-ai-assignment-2.onrender.com/api/cars/${this.props.productId}` : 'https://spynea-ai-assignment-2.onrender.com/api/cars';
     const method = isEditMode ? 'PUT' : 'POST';
 
     const options = {

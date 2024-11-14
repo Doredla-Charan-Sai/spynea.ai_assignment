@@ -16,7 +16,7 @@ class Login extends Component {
   getAPICall = async () => {
     const { username, password } = this.state;
     const userDetails = { username, password };
-    const apiUrl = 'http://localhost:3000/api/auth/login';
+    const apiUrl = 'https://spynea-ai-assignment-2.onrender.com/api/auth/login';
     const options = {
       method: 'POST',
       headers: {
@@ -40,7 +40,7 @@ class Login extends Component {
   signUpAPICall = async () => {
     const { username, email, password } = this.state;
     const userDetails = { username, email, password };
-    const apiUrl = 'http://localhost:3000/api/auth/register';
+    const apiUrl = 'https://spynea-ai-assignment-2.onrender.com/api/auth/register';
     const options = {
       method: 'POST',
       headers: {

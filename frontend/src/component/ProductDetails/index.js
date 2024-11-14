@@ -17,7 +17,7 @@ class ProductDetailsWithParams extends Component {
   fetchProductDetails = async (id) => {
     try {
       const yourAuthToken = Cookies.get('jwt_token');
-      const response = await fetch(`http://localhost:3000/api/cars/${id}`, {
+      const response = await fetch(`https://spynea-ai-assignment-2.onrender.com/api/cars/${id}`, {
         headers: {
           'Authorization': `Bearer ${yourAuthToken}`, 
           'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ class ProductDetailsWithParams extends Component {
         <p><strong>Dealer:</strong> {product.dealer}</p>
         <div className="product-images">
           {images.map((image, index) => (
-            <img key={index} src={`http://localhost:3000/${image.replace(/\\/g, '/')}`} alt={`product-${index}`} className="product-image" />
+            <img key={index} src={`https://spynea-ai-assignment-2.onrender.com/${image.replace(/\\/g, '/')}`} alt={`product-${index}`} className="product-image" />
           ))}
         </div>
 
