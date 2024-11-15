@@ -22,6 +22,7 @@ class ProductDetailsWithParams extends Component {
           'Authorization': `Bearer ${yourAuthToken}`, 
           'Content-Type': 'application/json',
         },
+        credentials: 'include',
       });
       if (response.ok) {
         const { car: product } = await response.json();

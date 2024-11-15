@@ -23,6 +23,7 @@ class ProductList extends Component {
           'Authorization': `Bearer ${yourAuthToken}`, 
           'Content-Type': 'application/json',
         },
+        credentials: 'include',
       }); 
 
       if (response.ok) {
@@ -62,6 +63,7 @@ class ProductList extends Component {
           'Authorization': `Bearer ${yourAuthToken}`,
           'Content-Type': 'application/json',
         },
+        credentials: 'include',
       });
 
       if (response.ok) {
