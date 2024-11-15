@@ -12,7 +12,7 @@ const upload = multer({ dest: 'uploads/' });
 app.use(cors({
     origin: function (origin, callback) {
         const allowedOrigins = [
-            'https://spynea-ai-assignment-git-main-doredla-charan-sais-projects.vercel.app',
+            'https://spynea-ai-assignment-doredla-charan-sais-projects.vercel.app',
             'http://localhost:3001'
         ];
         if (allowedOrigins.includes(origin) || !origin) {
