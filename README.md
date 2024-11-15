@@ -123,33 +123,57 @@ The tables are mentioned in the database.sql file
 # Backend
 
 backend/
+
 ├── node_modules/
+
 ├── uploads/                  # Stores uploaded images
+
 ├── database.db               # SQLite database file
+
 ├── database.sql              # SQL file for database schema
+
 ├── .gitignore
+
 ├── index.js                  # Entry point of the backend application
+
 ├── package.json              # Backend dependencies and scripts
+
 └── package-lock.json
 
 # Frontend
 
 frontend/
+
 ├── node_modules/
+
 ├── public/
+
 ├── src/
+
 │   ├── component/
+
 │   │   ├── CreateProduct/       # Component for creating a new product
+
 │   │   ├── Header/              # Header component
+
 │   │   ├── Login/               # Login component
+
 │   │   ├── LoginWrapper/        # Component wrapping login for conditional rendering
+
 │   │   ├── ProductDetails/      # Component for displaying product details
+
 │   │   ├── ProductList/         # Component listing all products
+
 │   │   └── ProtectedRoute/      # Component for route protection
+
 │   ├── App.css                  # Styling for App component
+
 │   ├── App.js                   # Main React component
+
 │   └── App.test.js              # Testing file for App component
+
 ├── package.json                # Frontend dependencies and scripts
+
 └── package-lock.json
 
 ---
