@@ -10,12 +10,18 @@ const cors = require('cors');
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
 app.use(cors({
-    origin: [
-        'https://spynea-ai-assignment-git-main-doredla-charan-sais-projects.vercel.app', 
-        'http://localhost:3001' 
-    ],
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-    credentials: true, 
+    origin: function (origin, callback) {
+        const allowedOrigins = [
+            'https://spynea-ai-assignment-git-main-doredla-charan-sais-projects.vercel.app',
+            'http://localhost:3001'
+        ];
+        if (allowedOrigins.includes(origin) || !origin) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true,
 }));
 let db = null;
 
